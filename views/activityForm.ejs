@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+
+<main class="add-edit-activity-container">
+    <h2>Add Activity</h2>
+    <form action="/trips/<%= tripId %>/activities/add" method="POST" class="activity-form">
+        <div class="form-group">
+            <label for="name">Activity Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter activity name" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" required>
+        </div>
+        <div class="form-group">
+            <label for="time">Time</label>
+            <input type="time" name="time" id="time" required>
+        </div>
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" name="location" id="location" placeholder="Enter activity location">
+        </div>
+        <div class="form-group">
+            <label for="notes">Notes</label>
+            <textarea name="notes" id="notes" placeholder="Enter any additional notes"></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Save Activity</button>
+    </form>
+</main>
+
+<%- include('partials/footer') %>
